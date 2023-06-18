@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1996815852548186683}
   - component: {fileID: 1996815852549284091}
   - component: {fileID: 7201016167079136979}
+  - component: {fileID: 151785809964288604}
+  - component: {fileID: -7208550316428625809}
   m_Layer: 0
   m_Name: Pizza
   m_TagString: Untagged
@@ -98,3 +100,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointValue: 10
   explosionFx: {fileID: 8328426341284958323, guid: ca11de6347ee648e78e32d5edb051192, type: 3}
+--- !u!58 &151785809964288604
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996815852551487035}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.0000000596046}
+  serializedVersion: 2
+  m_Radius: 0.22985056
+--- !u!114 &-7208550316428625809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996815852551487035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6da289543d5e4a58ae451e7528046a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

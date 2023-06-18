@@ -31,7 +31,7 @@ public class GameManagerX : MonoBehaviour
         StartCoroutine(SpawnTarget());
         StartCoroutine(TimeUpdate());
         score = 0;
-        time = 0;
+        time = 60;
         UpdateScore(0);
         titleScreen.SetActive(false);
     }
@@ -51,7 +51,7 @@ public class GameManagerX : MonoBehaviour
         while (isGameActive)
         {
             yield return new WaitForSeconds(spawnRate);
-            int index = Random.Range(0, 5);
+            int index = Random.Range(0, 4);
 
             if (isGameActive)
             {
@@ -85,6 +85,7 @@ public class GameManagerX : MonoBehaviour
     public void UpdateTime()
     {
         time -= 1;
+        timeText.text = $"Time: {time}";
         if(time == 0)
         {
             GameOver();

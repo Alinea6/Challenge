@@ -31,14 +31,17 @@ public class TargetX : MonoBehaviour
             Destroy(gameObject);
             gameManagerX.UpdateScore(pointValue);
             Explode();
-        }
-               
+            if (pointValue == -50)
+            {
+                gameManagerX.GameOver();
+            }
+        }      
     }
     
     Vector3 RandomSpawnPosition()
     {
-        float spawnPosX = RandomSquareIndex() * spaceBetweenSquares;
-        float spawnPosY = RandomSquareIndex() * spaceBetweenSquares;
+        float spawnPosX = minValueX +  RandomSquareIndex() * spaceBetweenSquares;
+        float spawnPosY = minValueY + RandomSquareIndex() * spaceBetweenSquares;
 
         Vector3 spawnPosition = new Vector3(spawnPosX, spawnPosY, 0);
         return spawnPosition;
@@ -54,6 +57,4 @@ public class TargetX : MonoBehaviour
     {
         Instantiate(explosionFx, transform.position, explosionFx.transform.rotation);
     }
-    
-
 }
